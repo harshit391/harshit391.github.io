@@ -55,6 +55,11 @@ a{
         height: 300px;
         top: 30px;
     }
+
+    .Nati{
+        border-bottom: 5px solid green;
+    }
+    
 }
 
 
@@ -221,7 +226,7 @@ a{
     position: absolute;
     top: 50px;
     left: 29.7%;
-    font-size: 22px;
+    font-size: 23px;
     padding: 5px;
     color: rgb(255, 0, 0);
     white-space: nowrap;
@@ -262,10 +267,5 @@ a{
     color: black;
     white-space: nowrap;
     visibility: hidden;
-}
-
-.myskills{
-    position: relative;
-    
 }
 
