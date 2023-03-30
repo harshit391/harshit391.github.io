@@ -60,12 +60,17 @@ a{
         margin-left: 0;
         margin-bottom: 60px;
         padding-left: 90px;
+        font-weight: 900;
+        margin-top: 20px;
     }
 
     .Testinomilas .Nati{
         padding-left: 120px;
         margin-top: 50px;
-        margin-bottom: 60px;
+        font-weight: 900;
+        border-right: 0px;
+        border-bottom: 2px solid #0DB760;
+        padding-bottom: 20px;
     }
 }
 
@@ -214,12 +219,11 @@ a{
     top: 670px;
     display: flex;
     justify-content: center;
-    border: 5px solid black;
 }
 
 .Testinomilas > a{
     font-size: 30px;
-    border: 5px solid red;
+    font-weight: 900;
 }
 
 .Nati{
