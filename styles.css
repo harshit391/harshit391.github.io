@@ -55,8 +55,19 @@ a{
         height: 300px;
         top: 30px;
     }
-}
 
+    .Testinomilas .internati{
+        margin-left: 0;
+        margin-bottom: 60px;
+        padding-left: 90px;
+    }
+
+    .Testinomilas .Nati{
+        padding-left: 120px;
+        margin-top: 50px;
+        margin-bottom: 60px;
+    }
+}
 
 #Logo{
     color: green;
@@ -203,19 +214,19 @@ a{
     top: 670px;
     display: flex;
     justify-content: center;
+    border: 5px solid black;
 }
 
 .Testinomilas > a{
     font-size: 30px;
+    border: 5px solid red;
 }
 
 .Nati{
-    display: inline;
     border-right: 2px solid #0DB760;
     padding-right: 250px;
 }
 
 .internati{
-    display: inline;
     margin-left: 250px;
 }
