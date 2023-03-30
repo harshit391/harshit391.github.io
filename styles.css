@@ -55,11 +55,6 @@ a{
         height: 300px;
         top: 30px;
     }
-
-    .Nati{
-        border-bottom: 5px solid green;
-    }
-    
 }
 
 
@@ -220,4 +215,7 @@ a{
     padding-right: 250px;
 }
 
-
+.internati{
+    display: inline;
+    margin-left: 250px;
+}
