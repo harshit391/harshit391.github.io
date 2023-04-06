@@ -7,10 +7,11 @@
       "default",
       {
         "ignore": [
-          "height: fit-content",
-          "width: fit-content"
+          "width: fit-content",
+          "height: fit-content"
         ]
       }
-    ]
+    ],
+    "no-inline-styles": "off"
   }
 }
