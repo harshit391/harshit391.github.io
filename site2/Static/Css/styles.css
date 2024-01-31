@@ -1,0 +1,976 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth !important;
+}
+
+/* Header */  
+
+header{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    z-index: 2;
+    height: 7%;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+}
+
+.logo img{
+    width: 50%;
+}
+
+header nav{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+header nav a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    font-weight: 700;
+    color: black;
+}
+
+header nav a:nth-of-type(1) {
+    color: #2b7bff;
+}
+
+header nav a:hover{
+    background-color: #f3f8f0;
+    color: #2b7bff;
+}
+
+a {
+    text-decoration: none;
+}
+
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+}
+
+.login h5 {
+    border: 2px solid #2b7bff;
+    color: #2b7bff;
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h5logo:hover{
+    background-color: #2b7bff;
+    color: white;
+}
+
+/* Header End */
+
+/* Main */
+
+/* Window */
+
+.slider{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 10rem;
+}
+
+.window {
+    display: flex;
+    overflow-x: hidden;
+    width: 100vw;
+    padding-bottom: 5rem;
+}
+
+.window > div {
+    animation-name: scroll;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    /* animation: scroll 12s linear infinite; */
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    10% { transform: translateX(0); }
+    20% { transform: translateX(-110%); }
+    30% { transform: translateX(-110%); }
+    40% { transform: translateX(-225%); }
+    50% { transform: translateX(-225%); }
+    60% { transform: translateX(-340%); }
+    70% { transform: translateX(-340%); }
+    80% { transform: translateX(-450%); }
+    90% { transform: translateX(-450%); }
+    100% { transform: translateX(-565%); }
+}
+
+
+.item {
+    display: flex;
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+}
+
+.item:not(:last-child) {
+    margin-right: 10rem;
+}
+
+.sep{
+    color: #2b7bff;
+}
+
+.itemcontent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 5rem;
+    width: 80%;
+}
+
+.itemcontent h1{
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.itemcontent p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.579);
+}
+
+.itemcontent button{
+    display: flex;
+    width: fit-content;
+    border: 2px solid #2b7bff;
+    color: #2b7bff;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: white;
+    margin-top: 1rem;
+}
+
+.itemcontent button:hover{
+    cursor: pointer;
+    background-color: #2b7bff;
+    color: white;
+}
+
+.itemimage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.itemimage img{
+    width: 80%;
+    border-radius: 10px;
+}
+
+.download{
+    display: flex;
+}
+
+.download a:last-child{
+    margin-left: 1rem;
+}
+
+.download a button{
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    border: none;   
+    color: black;
+}
+
+.download a button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+.download a button svg{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+/* Slider End */
+
+/* Achievements */
+
+.achievements{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    background-color: rgba(0, 0, 0, 0.84);
+}
+
+.achievements h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.achievementsItems{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.achievementsItems .itemAch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    animation: comeHere 1s ease-in-out;
+}
+
+@keyframes comeHere{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.achievementsItems .itemAch img{
+    width: 70%;
+}
+
+.achievementsItems .itemAch h6{
+    margin: 0;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.achievementsItems .itemAch p{
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: white;
+}
+
+/* Achievements End */
+
+/* Why Bharat Pe */
+
+.WhyBharatPe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6rem;
+}
+
+.mainBox1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+.mainBox1 h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.mainBox1 p{
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.684);
+}
+
+.slidingWindow{
+    display: flex;
+    flex-direction: column;
+    width: 120vw;
+    align-items: center;
+    overflow: hidden;
+    height: 60vh;
+}
+
+.slidingWindow > div {
+    animation: scroll3 10s linear infinite;
+}
+
+@keyframes scroll3 {
+    0% { transform: translateY(0); }
+    20% { transform: translateY(0); }
+    40% { transform: translateY(-120%); }
+    60% { transform: translateY(-120%); }
+    80% { transform: translateY(-240%); }
+    100% { transform: translateY(-240%); }
+}
+
+.contentBox1 {
+    display: flex;
+    justify-content: space-around;
+    width: 75%;
+    margin-bottom: 5rem;
+}
+
+.contentBox1 img{
+    border-radius: 10px;
+}
+
+.contentBox1 div{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+}
+
+.contentBox1 div h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.contentBox1 div p{
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* Why Bharat Pe End */
+
+/* Merchant */
+
+.Merchant{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    padding: 4rem;
+    background-color: #8b97aa24;
+}
+
+.Merchant h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+}
+
+.mainBox2{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.mainBox2 div{
+    text-align: center;
+    font-weight: 600;
+    padding: 0.75rem;
+    border-radius: 7.54px;
+}
+
+.mainBox2 div:hover{
+    cursor: pointer;
+    background-color: #2b7bff;
+    color: white;
+}
+
+.mainBox2 div:first-child{
+    background-color: #2b7bff;
+    color: white;
+    animation: scroll5 10s linear infinite;
+}
+
+@keyframes scroll5 {
+    0% { color: white;background-color: #2b7bff;}
+    20% { color: white;background-color: #2b7bff; }
+    40% { color: black;background-color: white; }
+    60% { color: black;background-color: white;}
+    80% { color: black;background-color: white; }
+    100% { color: black;background-color: white; }
+}
+
+.mainBox2 div:nth-child(2){
+    animation: scroll6 10s linear infinite;
+}
+
+@keyframes scroll6 {
+    0% { color: black;background-color: white;}
+    20% { color: black;background-color: white; }
+    40% { color: white;background-color: #2b7bff; }
+    60% { color: white;background-color: #2b7bff;}
+    80% { color: black;background-color: white; }
+    100% { color: black;background-color: white; }
+}
+
+.mainBox2 div:nth-child(3){
+    animation: scroll7 10s linear infinite;
+}
+
+@keyframes scroll7 {
+    0% { color: black;background-color: white;}
+    20% { color: black;background-color: white; }
+    40% { color: black;background-color: white; }
+    60% { color: black;background-color: white;}
+    80% { color: white;background-color: #2b7bff; }
+    100% { color: white;background-color: #2b7bff; }
+}
+
+
+
+.contentBox2 {
+    display: flex;
+    padding: 5rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.contentBox2 div{
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    background-color: white;
+    border-radius: 7.5px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    width: 20%;
+}
+
+.contentBox2 div h6{
+    font-size: 1.5rem;
+    margin: 0;
+    margin-top: 3rem;
+}
+
+.contentBox2 div p{
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.615);
+    margin: 0;
+    margin-top: 1rem;
+}
+
+.contentBox2 div a{
+    display: flex;
+    font-size: 1rem;
+    margin-top: 3rem;
+    font-weight: 600;
+    color: #2b7bff;
+}
+
+.contentBox2 div img{
+    width: 100%;
+}
+
+.contentBox2 div a svg{
+    width: 16px;
+}
+
+.contentBox2 div a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.slidingWindowMerchant{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    overflow: hidden;
+    height: 80vh;
+    margin-top: 1.5rem;
+}
+
+.slidingWindowMerchant > div {
+    animation: scroll4 10s linear infinite;
+}
+
+@keyframes scroll4 {
+    0% { transform: translateY(0);}
+    20% { transform: translateY(0); }
+    40% { transform: translateY(-100%); }
+    60% { transform: translateY(-100%); }
+    80% { transform: translateY(-200%); }
+    100% { transform: translateY(-200%); }
+}
+
+/* Merchant End */
+
+/* Consumer */
+
+.consumer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6rem;
+}
+
+.consumer h1{
+    font-size: 3rem;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 4rem;
+}
+
+.ContentConsumer{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 70vh;
+}
+
+.ContentConsumer > div {
+    animation: scroll2 10s linear infinite;
+}
+
+@keyframes scroll2 {
+    0% { transform: translateY(0); }
+    20% { transform: translateY(0); }
+    40% { transform: translateY(-100%); }
+    60% { transform: translateY(-100%); }
+    80% { transform: translateY(-200%); }
+    100% { transform: translateY(-200%); }
+}
+
+.contentBox31 {
+    display: flex;
+    padding: 5rem;
+    justify-content: center;
+    width: 100vw;
+}
+
+.contentBox31 div{
+    display: flex;
+      flex-direction: column;
+}
+
+.contentBox31 > img{
+    width: 25vw;
+    height: 50vh;
+}
+
+.insideContentBox31 {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+}
+
+.insideContentBox31 img{
+    width: 10vw;
+}
+
+.insideContentBox31 h4{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.insideContentBox31 div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.insideContentBox31 div:nth-of-type(1) {
+    margin-top: 2rem;
+}
+
+
+.insideContentBox31 div img{
+    width: 12%;
+    margin-right: 20px;
+}
+
+.insideContentBox31 div h6{
+    font-size: 1rem;
+    margin: 0;
+}
+
+.insideContentBox31 a{
+    display: flex;
+    font-size: 1rem;
+    margin-top: 3rem;
+    font-weight: 600;
+    margin-bottom: -1rem;
+    color: #2b7bff;
+}
+
+.insideContentBox31 a svg{
+    width: 16px;
+}
+
+.insideContentBox31 a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Consumer End */
+
+/* Stories */
+
+.stories{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6rem;
+    background-color: rgba(0, 255, 255, 0.116);
+}
+
+.stories h1{
+    font-size: 3rem;
+    font-weight: 700;
+    color: black;
+} 
+
+.stories button{
+    display: flex;
+    width: fit-content;
+    border: 2px solid #2b7bff;
+    color: #2b7bff;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: white;
+    margin-top: 4rem;
+}
+
+.stories button:hover{
+    cursor: pointer;
+    background-color: #2b7bff;
+    color: white;
+}
+
+.persons{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin-top: 5rem;
+}
+
+.persons div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.persons div img{
+    border-radius: 50%;
+}
+
+.persons div h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    margin-top: 3rem;
+}
+
+/* Stories End */
+
+/* News */
+
+.news{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6rem;
+}
+
+.news h1{
+    font-size: 3rem;
+    font-weight: 700;
+    color: black;
+}
+
+.newsBox{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.newsBox div{
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 5rem;
+    width: 20%;
+    margin-top: 5rem;
+}
+
+.newsBox div h5{
+    display: flex;
+    margin: 0;
+    font-size: 1.1rem;
+    color: rgba(0, 0, 0, 0.579);
+}
+
+.newsBox div h4{
+    display: flex;
+    height: 5vh;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.newsBox div p{
+    display: flex;
+    height: 10vh;
+    margin-top: 3rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.615);
+}
+
+.newsBox div a{
+    display: flex;
+    font-size: 1rem;
+    margin-top: 3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #2b7bff;
+}
+
+.newsBox div a svg{
+    width: 16px;
+}
+
+.newsBox div a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.news button{
+    display: flex;
+    width: fit-content;
+    border: 2px solid #2b7bff;
+    color: #2b7bff;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: white;
+    margin-top: 4rem;
+}
+
+.news button:hover{
+    cursor: pointer;
+    background-color: #2b7bff;
+    color: white;
+}
+
+/* News End */
+
+/* Footer */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6rem;
+    background-color: rgba(0, 0, 0, 0.882);
+}
+
+footer{
+    color: white;
+}
+
+footer a{
+    color: white;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+footer a:hover{
+    color: aqua;
+}
+
+.section1{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.section1-1 img{
+    width: 25%;
+}
+
+.section1-1{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    justify-content: space-around;
+    align-items: space-around;
+}
+
+.section1-2{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    padding: 1rem;
+}
+
+.section1-3{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.section1-4{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.section2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    padding-left: 2rem;
+}
+
+.section2 button{
+    display: flex;
+    width: fit-content;
+    border: 2px solid #2b7bff;
+    color: #2b7bff;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: white;
+}
+
+.section3 {
+    display: flex;
+    padding: 3rem;
+    margin-left: 2rem;
+    width: 100%;
+    margin-top: 4rem;
+    border-top:#ffffff28 1px solid;
+    border-bottom:#ffffff28 1px solid;
+}
+
+.section3 a:not(last-child){
+    margin-right: 2rem;
+}
+
+.section4{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.iconHolder{
+    display: flex;
+    justify-content: space-between;
+    width: 10%;
+}
+
+/* Footer End */
+
+/* Main End */
+
+/* Media Queries */
+
+
+@media screen and (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+
+    header{
+        height: fit-content;
+        position: absolute;
+        display: block;
+    }
+
+    header nav{
+        flex: 2 2 50%;
+        flex-wrap: wrap;
+    }
+
+    header nav a{
+        padding: 1rem;
+    }
+
+    .logo{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .logo img{
+        width: 100%;
+    }
+
+    .login{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .slider{
+        width: 100%;
+    }
+
+    .window{
+        margin-left: -15rem;
+        margin-top: 30rem;
+        width: 100%;
+    }
+
+    .item{
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .itemimage{
+        display: flex;
+        justify-content: center;
+        width: auto;
+    }
+
+    .achievementsItems{
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .persons{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .persons div:not(:last-child){
+        margin-bottom: 5rem;
+    }
+}
